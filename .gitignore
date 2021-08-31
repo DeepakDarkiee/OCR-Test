@@ -92,3 +92,4 @@ celerybeat-schedule
 staticfiles
 media
 *.sqlite3
+*migrations*
