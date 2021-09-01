@@ -2,11 +2,23 @@
 
 {% block title %}Login{% endblock %}
 
+
 {% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
+{% if request.user.is_authenticated %}
+<div class="jumbotron">
+    <h1 class="display-4" style="color:rgb(15, 128, 0)">Welcome {{request.user}}!</h1>
+    <p class="lead">
+      This is Simple OCR Based Project ,You can Upload any Document which is scanned and not searchable , this project will convert the document in serachable document.
+      <a href="/home" class="btn btn-success">Explore</a>
+      <a href="/logout" class="btn btn-danger">Go Out</a>
+    </p>
+  </div>
+{% else %}
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+{% endif %}
 {% endblock %}
