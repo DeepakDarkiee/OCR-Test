@@ -31,5 +31,5 @@ it will install all dependency on your system
 poetry run python manage.py runserver
 ```
 ```diff
-server localhost:800
+server localhost:8000
 ```
