@@ -10,6 +10,7 @@ Django = "^3.2.6"
 ocrmypdf = "^12.3.3"
 pdfplumber = "^0.5.28"
 PyPDF2 = "^1.26.0"
+requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
 
